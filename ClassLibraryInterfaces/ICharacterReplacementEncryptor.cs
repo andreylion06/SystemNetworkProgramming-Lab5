@@ -12,3 +12,5 @@ namespace ClassLibraryInterfaces
         string Decrypt(int key, string encryptedText);
     }
 }
+
+// Кінець файлу

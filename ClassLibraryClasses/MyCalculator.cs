@@ -3,6 +3,10 @@ using System.Text.Json;
 
 namespace ClassLibraryClasses
 {
+    // Ім'я файлу: MyCalculator.cs
+    // Ремарка: MyCalculator - включає в себе деякі математичні операції
+    // Автор: Андрій Сахно
+
     public class MyCalculator : ICalculator
     {
         public double Calculate(double x, double y)

@@ -15,6 +15,12 @@ namespace ConsoleAppLab5
 
     namespace AssemblyLoader
     {
+        // Ім'я файлу: AssemblyLoader.cs
+        // Ремарка: Клас AssemblyLoader призначений для завантаження та взаємодії з збірками (assembly) у .NET проекті.
+        // Він надає методи для завантаження збірок з власного проекту у тій самій рішенні (solution), або за абсолютним шляхом.
+        // Клас також дозволяє створювати екземпляри класів з завантажених збірок та розгружати їх з поточного домену застосунку.
+        // Автор: Андрій Сахно
+
         public class AssemblyLoader
         {
             public string? AssemblyName { get; private set; }
@@ -120,3 +126,5 @@ namespace ConsoleAppLab5
         }
     }
 }
+
+// Кінець файлу

@@ -1,6 +1,10 @@
 ﻿using ClassLibraryInterfaces;
 using ConsoleAppLab5.AssemblyLoader;
 
+// Ім'я файлу: Program.cs
+// Ремарка: Клас Program призначений для тестування функціоналу класа AssemblyLoader
+// Автор: Андрій Сахно
+
 class Program
 {
     static void Main(string[] args)
@@ -8,6 +12,7 @@ class Program
         //LoadAndTryMyAssembly();
         //LoadAndTryCREncryptor();
         LoadAndTryManyThreads();
+        Console.ReadLine();
     }
 
     static void LoadAndTryMyAssembly()
@@ -76,13 +81,11 @@ class Program
             if (calculatorInstance != null && calculatorInstance is ICalculator)
             {
                 ICalculator calculator = (ICalculator)calculatorInstance;
-
                 Console.ReadLine();
                 StartManyThreads(calculator);
             }
 
             libraryLoader.UnloadAssembly();
-            Console.ReadLine();
         }
         catch (Exception ex)
         {
@@ -92,10 +95,9 @@ class Program
 
     static void StartManyThreads(ICalculator calculator)
     {
-        int numThreads = 1000; // Кількість потоків для створення
+        int numThreads = 1000;
         Thread[] threads = new Thread[numThreads];
 
-        // Генерація випадкового масиву для сортування
         int[] array = GenerateRandomArray(1000);
 
         // Створення та запуск потоків
@@ -107,7 +109,6 @@ class Program
             });
             threads[i].Start();
         }
-
         // Очікування завершення всіх потоків
         foreach (Thread t in threads)
         {
@@ -123,8 +124,10 @@ class Program
         int[] array = new int[size];
         for (int i = 0; i < size; i++)
         {
-            array[i] = rand.Next(1000); // Для прикладу, максимальне значення - 1000
+            array[i] = rand.Next(1000);
         }
         return array;
     }
 }
+
+// Кінець файлу

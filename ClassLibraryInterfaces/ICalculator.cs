@@ -8,3 +8,5 @@
         void QuickSort(int[] array, int left, int right);
     }
 }
+
+// Кінець файлу
